@@ -48,7 +48,7 @@ public class HomeFragment extends Fragment {
 
         return view;
     }
-
+            //Retrives a list of users by referencing the user class
     private void findMatches() {
         Users users = new Users();
         if (mMatches != null){
