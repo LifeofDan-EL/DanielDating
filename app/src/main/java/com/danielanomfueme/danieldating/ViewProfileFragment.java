@@ -12,9 +12,24 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.danielanomfueme.danieldating.models.User;
+
 public class ViewProfileFragment extends Fragment {
     private static final String TAG = "ViewProfileFragment";
 
+
+    //Vars
+    private User mUser;
+
+    @Override
+    public void onCreate(@Nullable Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        Bundle bundle = this.getArguments();
+        if(bundle != null){
+            mUser = bundle.getParcelable(getString(R.string.intent_user));
+            Log.d(TAG, "Oncreate: got incoming bundle:" + mUser.getName());
+        }
+    }
 
     @Nullable
     @Override

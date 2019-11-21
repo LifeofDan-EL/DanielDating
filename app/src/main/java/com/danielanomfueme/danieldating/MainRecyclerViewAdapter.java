@@ -9,6 +9,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import androidx.annotation.NonNull;
 import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -27,6 +28,7 @@ public class MainRecyclerViewAdapter extends RecyclerView.Adapter<MainRecyclerVi
     //vars
     private ArrayList<User> mUsers = new ArrayList<>();
     private Context mContext;
+    private IMainActivity mInterface;
 
 
     public MainRecyclerViewAdapter(Context context, ArrayList<User> users) {
@@ -63,8 +65,16 @@ public class MainRecyclerViewAdapter extends RecyclerView.Adapter<MainRecyclerVi
             @Override
             public void onClick(View v) {
                 Log.d(TAG, "onClick: clicked on: " + mUsers.get(position).getName());
+
+                mInterface.inflateViewProfileFragment(mUsers.get(position));
             }
         });
+    }
+
+    @Override
+    public void onAttachedToRecyclerView(@NonNull RecyclerView recyclerView) {
+        super.onAttachedToRecyclerView(recyclerView);
+        mInterface = (IMainActivity) mContext;
     }
 
     @Override
