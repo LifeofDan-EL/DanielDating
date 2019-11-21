@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Daniel Dating</string>
+    <string name="first_time_user_message">Welcome to Daniel Dating. Hope you find your SoulMate.</string>
 </resources>
