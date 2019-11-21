@@ -7,7 +7,7 @@ import com.danielanomfueme.danieldating.models.User;
 
 public class Users {
     public User[] USERS = {
-            Daniel, Angel, Curry, p4
+            Daniel, Angel, Curry, p4, p6
     };
 
 
@@ -15,10 +15,13 @@ public class Users {
             Men
      */
     public static final User Daniel = new User(Uri.parse("android.resource://com.danielanomfueme.danieldating/" + R.drawable.daniel).toString(),
-            "Daniel", "Male","Female", "Looking");
+         "Daniel", "Male","Female", "Looking");
 
-    public static final User Curry = new User(Uri.parse("android.resource://com.danielanomfueme.danieldating./" + R.drawable.curry).toString(),
+    public static final User Curry = new User(Uri.parse("android.resource://com.danielanomfueme.danieldating/" + R.drawable.curry).toString(),
             "Curry", "Male", "Female", "Looking");
+
+    public static final User p6 = new User(Uri.parse("android.resource://com.danielanomfueme.danieldating/" + R.drawable.p6).toString(),
+            "Jiraya", "Male", "Oppai", "Looking for Tsunade");
 
 
     /*
@@ -26,7 +29,7 @@ public class Users {
      */
 
 
-    public static final User Angel = new User(Uri.parse("android.resource://com.danielanomfueme.danieldating./" + R.drawable.angel).toString(),
+    public static final User Angel = new User(Uri.parse("android.resource://com.danielanomfueme.danieldating/" + R.drawable.angel).toString(),
             "Angel", "Female","Male", "Looking");
     public static final User p4 = new User(Uri.parse("android.resource://com.danielanomfueme.danieldating/" + R.drawable.p4).toString(),
             "Phone", "Binary","Male and Female", "Need an Owner");
