@@ -66,6 +66,7 @@ public class MainRecyclerViewAdapter extends RecyclerView.Adapter<MainRecyclerVi
             public void onClick(View v) {
                 Log.d(TAG, "onClick: clicked on: " + mUsers.get(position).getName());
 
+                //Interface will be activated when clicked
                 mInterface.inflateViewProfileFragment(mUsers.get(position));
             }
         });
